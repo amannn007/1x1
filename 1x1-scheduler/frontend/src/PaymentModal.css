@@ -1,0 +1,57 @@
+/* Overlay styling to center the modal */
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it is on top */
+  transition: opacity 0.3s ease; /* Smooth transition for fading in/out */
+}
+
+/* Modal styling for the payment window */
+.Modal {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+  z-index: 1001; /* Ensure it's above the overlay */
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth opening/closing */
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Modal animation on opening */
+.Modal--open {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Modal animation on closing */
+.Modal--close {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+/* Close Button for the modal */
+.Modal__close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.Modal__close-button:hover {
+  color: #555;
+}
